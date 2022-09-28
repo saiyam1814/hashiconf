@@ -17,7 +17,7 @@ config {
   env = {
     "PUBLISHABLE_KEY" = "${config.internal.pubkey}",
     "SECRET_KEY"      = "${config.internal.key}",
-    "DOMAIN"          = "https://waypoint.291834ce-904a-4e6e-b79c-660f4b66e946.lb.civo.com",
+    "DOMAIN"          = "https://waypoint.5a3b223a-d26d-4cc8-bf7a-b6e84b0e9b09.lb.civo.com",
     "STATIC_DIR"      = "./client/"
     "PORT"            = "3000" 
   }
@@ -63,11 +63,11 @@ app "demo" {
   release {
     use "kubernetes" {
       ingress "http" {
-        host      = "waypoint.291834ce-904a-4e6e-b79c-660f4b66e946.lb.civo.com"
+        host      = "waypoint.5a3b223a-d26d-4cc8-bf7a-b6e84b0e9b09.lb.civo.com"
         path_type = "Prefix"
         path      = "/"
         tls {
-          hosts       = ["waypoint.291834ce-904a-4e6e-b79c-660f4b66e946.lb.civo.com"]
+          hosts       = ["waypoint.5a3b223a-d26d-4cc8-bf7a-b6e84b0e9b09.lb.civo.com"]
           secret_name = "workshop"
         }
       }
