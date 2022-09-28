@@ -1,0 +1,13 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: workshop
+  namespace: default
+spec:
+  secretName: workshop
+  issuerRef:
+    name: letsencrypt-prod
+    kind: ClusterIssuer
+  commonName: waypoint.
+  dnsNames:
+  - waypoint.

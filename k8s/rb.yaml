@@ -1,0 +1,24 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  creationTimestamp: null
+  name: demo
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: get-secrets
+subjects:
+- name: waypoint
+  kind: ServiceAccount
+  namespace: default
+- name: waypoint-bootstrap  
+  kind: ServiceAccount  
+  namespace: default
+- name: waypoint-runner       
+  kind: ServiceAccount
+  namespace: default
+- name: waypoint-runner-odr   
+  kind: ServiceAccount
+  namespace: default
+- name: default
+  kind: ServiceAccount
